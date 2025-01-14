@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-Hans</language>
     <copyright>&amp;copy; 2024 Congo contributors</copyright>
-    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/zh-hans/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>usb2can on Ubuntu</title>
+      <link>//localhost:1313/zh-hans/samples/usb2can-on-ubuntu/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh-hans/samples/usb2can-on-ubuntu/</guid>
+      <description>Simple usage of usb2can on Ubuntu</description>
+    </item>
     <item>
       <title>从Congo 1.x升级</title>
       <link>//localhost:1313/zh-hans/docs/version-2/upgrade/</link>

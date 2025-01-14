@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Congo</title>
-    <link>//localhost:1313/posts/</link>
-    <description>Recent content in Posts on Congo</description>
+    <title>posts on Semitia-Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in posts on Semitia-Blog</description>
     <generator>Hugo</generator>
-    <language>en-AU</language>
+    <language>zh-Hans</language>
     <copyright>&amp;copy; 2024 Congo contributors</copyright>
-    <lastBuildDate>Mon, 13 Jan 2025 15:14:31 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>//localhost:1313/posts/my-first-post/</link>
-      <pubDate>Mon, 13 Jan 2025 15:14:31 +0000</pubDate>
-      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <title>Embedded Development on Linux</title>
+      <link>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</guid>
+      <description>This is a note for learning embedded linux development. The used development board is N32G0 of &lt;em&gt;Nationstech&lt;/em&gt;</description>
+    </item>
+    <item>
+      <title>usb2can on Ubuntu</title>
+      <link>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</guid>
+      <description>Simple usage of usb2can on Ubuntu</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/linux/linux_preference/linux_preference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/linux_preference/linux_preference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/tools/blogs/blogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/blogs/blogs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/tools/docker_note/docker_note/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/docker_note/docker_note/</guid>
       <description></description>
     </item>
   </channel>

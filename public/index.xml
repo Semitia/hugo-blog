@@ -1,173 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to Congo! :tada: on Congo</title>
-    <link>//localhost:1313/</link>
-    <description>Recent content in Welcome to Congo! :tada: on Congo</description>
+    <title>Profile on Semitia-Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Profile on Semitia-Blog</description>
     <generator>Hugo</generator>
-    <language>en-AU</language>
+    <language>zh-Hans</language>
     <copyright>&amp;copy; 2024 Congo contributors</copyright>
-    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Upgrading from Congo 1.x</title>
-      <link>//localhost:1313/docs/version-2/upgrade/</link>
-      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/version-2/upgrade/</guid>
-      <description></description>
+      <title>Embedded Development on Linux</title>
+      <link>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</guid>
+      <description>This is a note for learning embedded linux development. The used development board is N32G0 of &lt;em&gt;Nationstech&lt;/em&gt;</description>
     </item>
     <item>
-      <title>Installation</title>
-      <link>//localhost:1313/docs/installation/</link>
-      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/installation/</guid>
-      <description>Learn how to get up and running using Hugo and Congo from a completely blank state. It&amp;rsquo;s the best place to start if you&amp;rsquo;re a new user.</description>
-    </item>
-    <item>
-      <title>Getting Started</title>
-      <link>//localhost:1313/docs/getting-started/</link>
-      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/getting-started/</guid>
-      <description>This section assumes you have already installed the Congo theme and are ready to start with basic configuration tasks like selecting a colour scheme, menu and content structure.</description>
-    </item>
-    <item>
-      <title>Configuration</title>
-      <link>//localhost:1313/docs/configuration/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/configuration/</guid>
-      <description>Discover all the site, language and theme configurations that are available in Congo and how they can be used to customise your project.</description>
-    </item>
-    <item>
-      <title>Icons</title>
-      <link>//localhost:1313/samples/icons/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/icons/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Users</title>
-      <link>//localhost:1313/users/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/users/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Homepage Layout</title>
-      <link>//localhost:1313/docs/homepage-layout/</link>
-      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/homepage-layout/</guid>
-      <description>Congo provides a fully flexible homepage layout with built-in templates and the ability to provide your own.</description>
-    </item>
-    <item>
-      <title>Front Matter</title>
-      <link>//localhost:1313/docs/front-matter/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/front-matter/</guid>
-      <description>While supporting most Hugo defaults, Congo adds a number of front matter parameters to customise the presentation of individual articles.</description>
-    </item>
-    <item>
-      <title>Shortcodes</title>
-      <link>//localhost:1313/docs/shortcodes/</link>
-      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/shortcodes/</guid>
-      <description>Congo includes several shortcodes for adding rich content to articles including images, charts, diagrams, buttons and more.</description>
-    </item>
-    <item>
-      <title>Partials</title>
-      <link>//localhost:1313/docs/partials/</link>
-      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/partials/</guid>
-      <description>Partials are used to add special functionality to the theme including analytics, comments, favicons, custom scripts and more.</description>
-    </item>
-    <item>
-      <title>Content Examples</title>
-      <link>//localhost:1313/docs/content-examples/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/content-examples/</guid>
-      <description>It&amp;rsquo;s time to bring everything together with some examples that demonstrate how content should be created and structured.</description>
-    </item>
-    <item>
-      <title>Advanced Customisation</title>
-      <link>//localhost:1313/docs/advanced-customisation/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/advanced-customisation/</guid>
-      <description>Congo supports advanced customisations that include modifying the underlying Tailwind configuration, building the theme manually and providing custom CSS.</description>
-    </item>
-    <item>
-      <title>Hosting &amp; Deployment</title>
-      <link>//localhost:1313/docs/hosting-deployment/</link>
-      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/hosting-deployment/</guid>
-      <description>Congo is designed to be flexible in almost any deployment scenario. Learn more about how to deploy your project to some common hosting platforms.</description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>//localhost:1313/samples/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/markdown/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown formatting that can be used in Congo, also it shows how some basic HTML elements are decorated.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Rich Content</title>
-      <link>//localhost:1313/samples/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/rich-content/</guid>
-      <description>This is an &lt;em&gt;example&lt;/em&gt; of a &lt;strong&gt;rich&lt;/strong&gt; content summary.</description>
-    </item>
-    <item>
-      <title>Placeholder Text</title>
-      <link>//localhost:1313/samples/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mathematical notation</title>
-      <link>//localhost:1313/samples/mathematical-notation/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/mathematical-notation/</guid>
-      <description>&lt;p&gt;KaTeX can be used to render mathematical notation within articles.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Charts</title>
-      <link>//localhost:1313/samples/charts/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/charts/</guid>
-      <description>Congo includes Chart.js for powerful charts and data visualisations.</description>
-    </item>
-    <item>
-      <title>Diagrams and Flowcharts</title>
-      <link>//localhost:1313/samples/diagrams-flowcharts/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/diagrams-flowcharts/</guid>
-      <description>It&amp;rsquo;s easy to add diagrams and flowcharts to articles using Mermaid.</description>
-    </item>
-    <item>
-      <title>Emoji :parachute:</title>
-      <link>//localhost:1313/samples/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/samples/emoji/</guid>
-      <description>📖🏞️🧗🏽🐉🧙🏽‍♂️🧚🏽👸</description>
+      <title>usb2can on Ubuntu</title>
+      <link>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</guid>
+      <description>Simple usage of usb2can on Ubuntu</description>
     </item>
     <item>
       <title></title>
-      <link>//localhost:1313/docs/version-2/lighthouse/</link>
+      <link>http://localhost:1313/posts/linux/linux_preference/linux_preference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/docs/version-2/lighthouse/</guid>
+      <guid>http://localhost:1313/posts/linux/linux_preference/linux_preference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/tools/blogs/blogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/blogs/blogs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/tools/docker_note/docker_note/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/docker_note/docker_note/</guid>
       <description></description>
     </item>
     <item>
       <title>advanced</title>
-      <link>//localhost:1313/tags/advanced/_index.zh-cn/</link>
+      <link>http://localhost:1313/tags/advanced/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/advanced/_index.zh-cn/</guid>
+      <guid>http://localhost:1313/tags/advanced/_index.zh-cn/</guid>
       <description></description>
     </item>
     <item>
       <title>Tags</title>
-      <link>//localhost:1313/tags/_index.zh-cn/</link>
+      <link>http://localhost:1313/tags/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/_index.zh-cn/</guid>
+      <guid>http://localhost:1313/tags/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>

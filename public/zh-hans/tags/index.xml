@@ -310,5 +310,26 @@
       <guid>//localhost:1313/zh-hans/tags/emoji/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Can</title>
+      <link>//localhost:1313/zh-hans/tags/can/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh-hans/tags/can/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Embedded</title>
+      <link>//localhost:1313/zh-hans/tags/embedded/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh-hans/tags/embedded/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>//localhost:1313/zh-hans/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh-hans/tags/linux/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
