@@ -5,7 +5,9 @@ description: Simple usage of usb2can on Ubuntu
 summary: Simple usage of usb2can on Ubuntu
 tags: ["embedded", "linux", "can"]
 ---
-![IMG-20250114171043624.jpg]
+
+![IMG-20250114171043624.jpg](/img/posts/Linux/usb2can%20on%20Ubuntu/IMG-20250114171043624.jpg)
+
 ## 一、安装必要的软件包
 
 ### Python-can

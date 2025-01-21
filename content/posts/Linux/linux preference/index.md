@@ -1,3 +1,11 @@
+---
+title: linux preference
+date: 2025-01-21
+description: Useful system configuration for linux.
+summary: Useful system configuration for linux.
+tags: ["linux"]
+---
+
 # 终端
 
 ### 自动补全
@@ -320,7 +328,12 @@ npm install -g hexo-cli
 
 # 常用应用
 ## Zotero
+
 以下是安装 `Zotero-7.0.11_linux-x86_64.tar.bz2` 的步骤：
+
+似乎有个更简便的
+
+>https://github.com/retorquere/zotero-deb
 
 ---
 
@@ -473,3 +486,8 @@ sudo apt install gnome-tweaks gnome-shell-extensions
         - 可以与其他分屏扩展配合使用。
 
 直接搜索安装即可
+
+
+
+
+![IMG-20250121234542436.png](/img/posts/Linux/linux%20preference/IMG-20250121234542436.png)

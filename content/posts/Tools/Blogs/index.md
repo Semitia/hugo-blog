@@ -1,3 +1,13 @@
+---
+title: Blogs
+date: 2025-01-21
+description: Blog configuration with common frameworks.
+summary: Blog configuration with common frameworks.
+tags: ["Blog", "Hugo"]
+---
+
+![IMG-20250121234134792.png](/img/posts/Tools/Blogs/IMG-20250121234134792.png)
+
 # Hugo
 
 ## 环境配置
@@ -92,3 +102,6 @@ Root Directory 不用修改
 按照vercel给出的配置，在域名提供商那里修改域名DNS配置即可。
 
 ![[IMG-20250114162457092.png]]![[IMG-20250114162457143.png]]
+
+
+## 自动部署脚本

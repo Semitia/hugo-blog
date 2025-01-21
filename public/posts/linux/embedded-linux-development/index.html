@@ -1,0 +1,1026 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="zh-Hans"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Embedded Development on Linux &middot; Semitia-Blog</title>
+    <meta name="title" content="Embedded Development on Linux &middot; Semitia-Blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.3e97d1a40161cd59b059d44499fc9d982d868881f1450889ca07e646a9fb3a8e.css"
+    integrity="sha256-PpfRpAFhzVmwWdREmfydmC2GiIHxRQiJygfmRqn7Oo4="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e2f23ac92b690a4e99ab2dffef9aa96a95f7ec39636fb9fa7eeb70d55ba347ae.js"
+      integrity="sha256-4vI6yStpCk6Zqy3/75qpapX37Dljb7n6futw1VujR64="
+      data-copy="复制"
+      data-copied="已复制"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      A note for learning embedded linux development.
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/linux/embedded-linux-development/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/linux/embedded-linux-development/">
+  <meta property="og:site_name" content="Semitia-Blog">
+  <meta property="og:title" content="Embedded Development on Linux">
+  <meta property="og:description" content="A note for learning embedded linux development.">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-14T00:00:00+00:00">
+    <meta property="article:tag" content="Embedded">
+    <meta property="article:tag" content="Linux">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Embedded Development on Linux">
+  <meta name="twitter:description" content="A note for learning embedded linux development.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Embedded Development on Linux",
+    "headline": "Embedded Development on Linux",
+    "description": "A note for learning embedded linux development.",
+    "abstract": "This is a note for learning embedded linux development. The used development board is N32G0 of \u003cem\u003eNationstech\u003c\/em\u003e",
+    "inLanguage": "zh-Hans",
+    "url" : "http:\/\/localhost:1313\/posts\/linux\/embedded-linux-development\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Semitia"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-01-14T00:00:00\u002b00:00",
+    "datePublished": "2025-01-14T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-01-14T00:00:00\u002b00:00",
+    
+    "keywords": ["embedded","linux"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "884"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Profile",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Embedded Development on Linux",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  <meta name="author" content="Semitia" />
+  
+    
+      <link href="https://twitter.com/" rel="me" />
+    
+      <link href="https://youtube.com/" rel="me" />
+    
+      <link href="https://github.com/" rel="me" />
+    
+      <link href="https://scholar.google.com/" rel="me" />
+    
+      <link href="mailto:Alexavier-L@outlook.com" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >跳到主要内容</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Semitia-Blog</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="projects"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+                  <button
+                    id="search-button-1"
+                    title="搜索 (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/"
+      >Profile</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/linux/embedded-linux-development/"
+      >Embedded Development on Linux</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Embedded Development on Linux
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-01-14 00:00:00 &#43;0000 UTC">2025年1月14日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://github.com/jpanther/congo/tree/dev/exampleSite/content/posts/Linux/Embedded%20Linux%20Development/index.zh-Hans.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="编辑内容"
+    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    目录
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reference-links">Reference Links</a></li>
+    <li><a href="#environment-config">Environment Config</a>
+      <ul>
+        <li><a href="#vscode">VsCode</a></li>
+        <li><a href="#gcc">GCC</a></li>
+        <li><a href="#net6">.NET6</a></li>
+        <li><a href="#jlink">Jlink</a></li>
+        <li><a href="#armcc">Armcc</a></li>
+        <li><a href="#vofa">VOFA+</a></li>
+        <li><a href="#ttyusb">ttyUSB</a></li>
+      </ul>
+    </li>
+    <li><a href="#environment-configuration-test">Environment Configuration Test</a>
+      <ul>
+        <li><a href="#gcc-1">GCC</a></li>
+        <li><a href="#armcc-1">Armcc</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>This is a note for learning embedded linux development. The used development board is N32G0 of <em>Nationstech</em></p>
+<h2 id="reference-links" class="relative group">Reference Links <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reference-links" aria-label="锚点">#</a></span></h2><ul>
+<li><a href="https://www.nationstech.com/developer/" target="_blank" rel="noreferrer">Nationstech Developer Community</a></li>
+<li><a href="https://doc.embedfire.com/linux/imx6/linux_base/zh/latest/README.html" target="_blank" rel="noreferrer">野火 tutorial for embedded linux development</a></li>
+</ul>
+<h2 id="environment-config" class="relative group">Environment Config <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#environment-config" aria-label="锚点">#</a></span></h2><ul>
+<li><a href="">Nationstech Tutorial</a></li>
+</ul>
+<h3 id="vscode" class="relative group">VsCode <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vscode" aria-label="锚点">#</a></span></h3><h4 id="clangd" class="relative group">Clangd <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#clangd" aria-label="锚点">#</a></span></h4><blockquote>
+<p>To understand your source code, clangd needs to know your build flags.
+(This is just a fact of life in C++, source files are not self-contained).</p>
+<p>By default, clangd will assume your code is built as <code>clang some_file.cc</code>,
+and you’ll probably get spurious errors about missing <code>#include</code>d files, etc.</p>
+</blockquote>
+<p>For this project , we use <strong>bear</strong> tool to generate <strong>compile_commands.json</strong>.</p>
+<ul>
+<li>
+<p><strong>确保 Bear 已安装</strong></p>
+<p><code>sudo apt-get install bear</code></p>
+</li>
+<li>
+<p><strong>导航到项目根目录</strong> 确保您在项目的根目录下：</p>
+<p><code>cd ~/SumResearch_2024/Repository/Nations.N32G030_Library.1.1.0</code></p>
+</li>
+<li>
+<p><strong>使用 Bear 生成 <code>compile_commands.json</code> 文件</strong></p>
+<p><code>bear -- make -C projects/n32g030_EVAL/gripper/GCC clean </code></p>
+<p><code>bear -- make -C projects/n32g030_EVAL/gripper/GCC</code></p>
+</li>
+</ul>
+<h3 id="gcc" class="relative group">GCC <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#gcc" aria-label="锚点">#</a></span></h3><ul>
+<li><a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads" target="_blank" rel="noreferrer">Arm GNU Toolchain Downloads – Arm Developer</a></li>
+</ul>
+<ol>
+<li><strong>Choose the right version</strong>：</li>
+</ol>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/home/semitia/.config/marktext/images/2024-07-12-12-08-52-image.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<ol start="2">
+<li><strong>unpack the file</strong>：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -xf arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz
+</span></span></code></pre></div><p>这将会在当前目录下解压出一个名为 <code>arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi</code> 的文件夹。</p>
+<ol start="3">
+<li><strong>选择安装位置</strong>：
+将解压后的工具链移动到适当的位置，比如 <code>/opt</code> 目录下</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mv arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi /opt
+</span></span></code></pre></div><ol start="4">
+<li><strong>设置环境变量</strong>：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=&#34;/opt/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></div><ol start="5">
+<li><strong>验证安装</strong>：
+Create a C file and run command below to confirm the installation of GCC.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arm-none-eabi-gcc -o output_file source_file.c
+</span></span></code></pre></div><p>Expect output:</p>
+<h3 id="net6" class="relative group">.NET6 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#net6" aria-label="锚点">#</a></span></h3><ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0" target="_blank" rel="noreferrer">Download .NET 6.0 (Linux, macOS, and Windows)</a></li>
+</ul>
+<p>When firstly opened a project with extension <strong>EIDE</strong>, it would warn that:</p>
+<blockquote>
+<p>Not found <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0" title="https://dotnet.microsoft.com/en-us/download/dotnet/6.0" target="_blank" rel="noreferrer">.NET6 runtime</a> on your pc, please install it !</p>
+</blockquote>
+<p>Directly click the official link and follow the guide then we can download the correct version.</p>
+<h3 id="jlink" class="relative group">Jlink <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#jlink" aria-label="锚点">#</a></span></h3><ul>
+<li><a href="https://www.segger.com/downloads/jlink/" target="_blank" rel="noreferrer">J-Link Software and Documentation Pack</a></li>
+</ul>
+<p>We can directly download the <strong>.deb</strong> pack or others.</p>
+<p>After download, use command below to vertify</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">JLinkExe --version
+</span></span></code></pre></div><p>expect output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">SEGGER J-Link Commander V7.96s <span class="o">(</span>Compiled Jul  <span class="m">4</span> <span class="m">2024</span> 18:19:44<span class="o">)</span>
+</span></span><span class="line"><span class="cl">DLL version V7.96s, compiled Jul  <span class="m">4</span> <span class="m">2024</span> 18:19:18
+</span></span></code></pre></div><h4 id="connect-to-board" class="relative group">Connect To Board <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#connect-to-board" aria-label="锚点">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Connecting to target via SWD
+</span></span><span class="line"><span class="cl">Found SW-DP with ID 0x0BB11477
+</span></span><span class="line"><span class="cl">DPv0 detected
+</span></span><span class="line"><span class="cl">CoreSight SoC-400 or earlier
+</span></span><span class="line"><span class="cl">Scanning AP map to find all available APs
+</span></span><span class="line"><span class="cl">AP<span class="o">[</span>1<span class="o">]</span>: Stopped AP scan as end of AP map has been reached
+</span></span><span class="line"><span class="cl">AP<span class="o">[</span>0<span class="o">]</span>: AHB-AP <span class="o">(</span>IDR: 0x04770021<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Iterating through AP map to find AHB-AP to use
+</span></span><span class="line"><span class="cl">AP<span class="o">[</span>0<span class="o">]</span>: Core found
+</span></span><span class="line"><span class="cl">AP<span class="o">[</span>0<span class="o">]</span>: AHB-AP ROM base: 0xE00FF000
+</span></span><span class="line"><span class="cl">CPUID register: 0x410CC200. Implementer code: 0x41 <span class="o">(</span>ARM<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Found Cortex-M0 r0p0, Little endian.
+</span></span><span class="line"><span class="cl">FPUnit: <span class="m">4</span> code <span class="o">(</span>BP<span class="o">)</span> slots and <span class="m">0</span> literal slots
+</span></span><span class="line"><span class="cl">CoreSight components:
+</span></span><span class="line"><span class="cl">ROMTbl<span class="o">[</span>0<span class="o">]</span> @ E00FF000
+</span></span><span class="line"><span class="cl"><span class="o">[</span>0<span class="o">][</span>0<span class="o">]</span>: E000E000 CID B105E00D PID 000BB008 SCS
+</span></span><span class="line"><span class="cl"><span class="o">[</span>0<span class="o">][</span>1<span class="o">]</span>: E0001000 CID B105E00D PID 000BB00A DWT
+</span></span><span class="line"><span class="cl"><span class="o">[</span>0<span class="o">][</span>2<span class="o">]</span>: E0002000 CID B105E00D PID 000BB00B FPB
+</span></span><span class="line"><span class="cl">Memory zones:
+</span></span><span class="line"><span class="cl">  Zone: <span class="s2">&#34;Default&#34;</span> Description: Default access mode
+</span></span><span class="line"><span class="cl">Cortex-M0 identified.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo JLinkGDBServer -device N32G030C8 -if SWD -speed <span class="m">4000</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Connecting to J-Link...
+</span></span><span class="line"><span class="cl">J-Link is connected.
+</span></span><span class="line"><span class="cl">Firmware: J-Link ARM-OB STM32 compiled Aug <span class="m">22</span> <span class="m">2012</span> 19:52:04
+</span></span><span class="line"><span class="cl">Hardware: V7.00
+</span></span><span class="line"><span class="cl">S/N: <span class="m">20090928</span>
+</span></span><span class="line"><span class="cl">Feature<span class="o">(</span>s<span class="o">)</span>: RDI,FlashDL,FlashBP,JFlash,GDB
+</span></span><span class="line"><span class="cl">Checking target voltage...
+</span></span><span class="line"><span class="cl">Target voltage: 3.30 V
+</span></span><span class="line"><span class="cl">Listening on TCP/IP port <span class="m">2331</span>
+</span></span><span class="line"><span class="cl">Connecting to target...
+</span></span><span class="line"><span class="cl">Halting core...
+</span></span><span class="line"><span class="cl">Connected to target
+</span></span><span class="line"><span class="cl">Waiting <span class="k">for</span> GDB connection...
+</span></span></code></pre></div><p>Then we can use DEBUG in VsCode. It may meet report an error:</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/home/semitia/%e5%9b%be%e7%89%87/%e6%88%aa%e5%9b%be/%e6%88%aa%e5%9b%be%202024-07-13%2021-26-31.png" alt="截图 2024-07-13 21-26-31.png" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>That means the lack of libncursesw.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install libncursesw5
+</span></span><span class="line"><span class="cl">sudo apt-get install libncurses5
+</span></span></code></pre></div><h3 id="armcc" class="relative group">Armcc <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#armcc" aria-label="锚点">#</a></span></h3><p>Armcc is included in DS-5, however, <strong>Arm DS-5</strong> has been superseded by <strong>Arm Development Studio</strong>. Evaluation <strong>licenses</strong> are only available for the latest version of Arm DS.</p>
+<ul>
+<li>
+<p><a href="https://www.linuxidc.com/Linux/2014-02/97346.htm" target="_blank" rel="noreferrer">Linux下armcc和arm-linux交叉编译环境的配置_Linux编程_Linux公社-Linux系统门户网站</a></p>
+</li>
+<li>
+<p><a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio#Software-Download" target="_blank" rel="noreferrer">Arm Development Studio</a></p>
+</li>
+</ul>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/home/semitia/.config/marktext/images/2024-07-12-12-24-02-image.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">To start using Arm Development Studio 2024.0 either:
+</span></span><span class="line"><span class="cl">- Create a suite sub-shell using /opt/arm/developmentstudio-2024.0/bin/suite_exec &lt;shell&gt;
+</span></span><span class="line"><span class="cl">- Launch GUI tools via their desktop menu entries
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The Release notes <span class="k">for</span> the product can be found here: file:///opt/arm/developmentstudio-2024.0/sw/info/readme.html
+</span></span></code></pre></div><h3 id="vofa" class="relative group">VOFA+ <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vofa" aria-label="锚点">#</a></span></h3><p>Download the software directly from on official website.</p>
+<ul>
+<li><a href="https://www.vofa.plus/" target="_blank" rel="noreferrer">VOFA+</a></li>
+</ul>
+<p>After installation, double-clicking the software icon does not start the program normally. Run it in terminal, it would repot the error:</p>
+<blockquote>
+<p>vofa+: error while loading shared libraries: libcrypto.so.1.1: cannot open shared object file: No such file or directory</p>
+</blockquote>
+<p>Before <strong>UBUNTU22.04</strong>, we may can install it directly</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install libssl1.1
+</span></span></code></pre></div><p>After 22.04, we can&rsquo;t find the package because libssl1.1 may have been replaced by libssl3.</p>
+<p>Luckily, I found <strong>libssl1.1</strong> in my system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find / -name <span class="s2">&#34;libcrypto.so*&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># OUTPUT: /opt/QQ/resources/app/avsdk/libcrypto.so.1.1</span>
+</span></span></code></pre></div><p>So we can make symbolic link:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ln -s /opt/QQ/resources/app/avsdk/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
+</span></span></code></pre></div><p>If we can&rsquo;t find libssl1.1, we can download <strong>QQ-linux</strong> or download it <strong>manually</strong> (for reference only).</p>
+<ol>
+<li>
+<p><strong>下载 OpenSSL 1.1 源码</strong></p>
+<p><code>wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz tar -zxvf openssl-1.1.1k.tar.gz cd openssl-1.1.1k</code></p>
+</li>
+<li>
+<p><strong>配置和安装</strong></p>
+<p>使用自定义前缀安装到特定路径以避免与系统版本冲突：</p>
+<p><code>./config --prefix=/usr/local/openssl-1.1 --openssldir=/usr/local/openssl-1.1 make sudo make install</code></p>
+</li>
+<li>
+<p><strong>配置动态链接库路径</strong></p>
+<p>将新安装的 OpenSSL 库路径添加到系统库路径中：</p>
+<p><code>echo &quot;/usr/local/openssl-1.1/lib&quot; | sudo tee /etc/ld.so.conf.d/openssl-1.1.conf sudo ldconfig</code></p>
+</li>
+</ol>
+<h4 id="确认安装是否成功" class="relative group">确认安装是否成功 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%a1%ae%e8%ae%a4%e5%ae%89%e8%a3%85%e6%98%af%e5%90%a6%e6%88%90%e5%8a%9f" aria-label="锚点">#</a></span></h4><ol>
+<li>
+<p><strong>验证 OpenSSL 版本</strong></p>
+<p>通过指定路径运行新安装的 OpenSSL 来确认版本：</p>
+<p><code>/usr/local/openssl-1.1/bin/openssl version</code></p>
+</li>
+<li>
+<p><strong>检查库文件</strong></p>
+<p>确认新库文件存在于指定路径：</p>
+<p><code>ls /usr/local/openssl-1.1/lib</code></p>
+</li>
+</ol>
+<h3 id="ttyusb" class="relative group">ttyUSB <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ttyusb" aria-label="锚点">#</a></span></h3><p>ttyUSB cannot be used directly In <strong>Ubuntu22.04</strong>.</p>
+<p>Check the state of the USB device</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dmesg <span class="p">|</span> grep tty
+</span></span><span class="line"><span class="cl"><span class="c1"># output </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>    0.068371<span class="o">]</span> printk: console <span class="o">[</span>tty0<span class="o">]</span> enabled
+</span></span><span class="line"><span class="cl"><span class="o">[</span>  555.498168<span class="o">]</span> usb 3-3.3: ch341-uart converter now attached to ttyUSB0
+</span></span><span class="line"><span class="cl"><span class="o">[</span>  556.189007<span class="o">]</span> usb 3-3.3: usbfs: interface <span class="m">0</span> claimed by ch341 <span class="k">while</span> <span class="s1">&#39;brltty&#39;</span> sets config <span class="c1">#1</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>  556.189756<span class="o">]</span> ch341-uart ttyUSB0: ch341-uart converter now disconnected from ttyUSB0
+</span></span></code></pre></div><p>It indicates that <strong>brltty</strong> has taken control of the CH341 device.</p>
+<p>We can uninstall it directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get remove --purge brltty
+</span></span></code></pre></div><p>Then <strong>reboot</strong> Ubuntu and check the USB again:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>    0.066547<span class="o">]</span> printk: console <span class="o">[</span>tty0<span class="o">]</span> enabled
+</span></span><span class="line"><span class="cl"><span class="o">[</span>    4.535503<span class="o">]</span> usb 3-3.3: ch341-uart converter now attached to ttyUSB03
+</span></span><span class="line"><span class="cl"><span class="c1"># OR: ls /dev/ttyUSB*</span>
+</span></span></code></pre></div><h2 id="environment-configuration-test" class="relative group">Environment Configuration Test <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#environment-configuration-test" aria-label="锚点">#</a></span></h2><h3 id="gcc-1" class="relative group">GCC <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#gcc-1" aria-label="锚点">#</a></span></h3><p>With the help of VsCode extension <strong>EIDE</strong>, it&rsquo;s convient to use gcc to compile chips of <em>Cortex-M4</em> series. However, it doesn&rsquo;t support <em>Cortex-M0</em> series.</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/home/semitia/.config/marktext/images/2024-07-12-14-49-42-image.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/home/semitia/.config/marktext/images/2024-07-12-14-50-09-image.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h4 id="n32-g4x" class="relative group">N32 G4x <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#n32-g4x" aria-label="锚点">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span> INFO <span class="o">]</span> start outputting files ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt;&gt; output hex file              <span class="o">[</span><span class="k">done</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">file path: <span class="s2">&#34;build/N32G45x_GCC/N32G45xDemo.hex&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt;&gt; output bin file              <span class="o">[</span><span class="k">done</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">file path: <span class="s2">&#34;build/N32G45x_GCC/N32G45xDemo.bin&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> DONE <span class="o">]</span> build successfully !, elapsed <span class="nb">time</span> 0:0:0
+</span></span></code></pre></div><h5 id="n32-g0x" class="relative group">N32 G0x <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#n32-g0x" aria-label="锚点">#</a></span></h5><h3 id="armcc-1" class="relative group">Armcc <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#armcc-1" aria-label="锚点">#</a></span></h3><h4 id="compile" class="relative group">compile <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compile" aria-label="锚点">#</a></span></h4><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250121233152772.png" alt="IMG-20250121233152772.png" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="467"
+        height="467"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Semitia"
+        loading="lazy" decoding="async"
+        
+          src="/img/Citlali-avator.jpg"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          作者
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Semitia
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">机器人小白。</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://twitter.com/"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://youtube.com/"
+          target="_blank"
+          aria-label="Youtube"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://scholar.google.com/"
+          target="_blank"
+          aria-label="Google-Scholar"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:Alexavier-L@outlook.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/linux/usb2can-on-ubuntu/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >usb2can on Ubuntu</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-01-14 00:00:00 &#43;0000 UTC">2025年1月14日</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/linux/linux-preference/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >linux preference</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-01-21 00:00:00 &#43;0000 UTC">2025年1月21日</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="回到顶部"
+            title="回到顶部"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2024 Congo contributors
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a> 强力驱动
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="切换为深色模式"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="切换为浅色模式"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

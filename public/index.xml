@@ -7,13 +7,34 @@
     <generator>Hugo</generator>
     <language>zh-Hans</language>
     <copyright>&amp;copy; 2024 Congo contributors</copyright>
-    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Blogs</title>
+      <link>http://localhost:1313/posts/tools/blogs/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/blogs/</guid>
+      <description>Blog configuration with common frameworks.</description>
+    </item>
+    <item>
+      <title>Docker Note</title>
+      <link>http://localhost:1313/posts/tools/docker-note/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tools/docker-note/</guid>
+      <description>Practical usage of Docker.</description>
+    </item>
+    <item>
+      <title>linux preference</title>
+      <link>http://localhost:1313/posts/linux/linux-preference/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/linux-preference/</guid>
+      <description>Useful system configuration for linux.</description>
+    </item>
+    <item>
       <title>Embedded Development on Linux</title>
-      <link>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</link>
+      <link>http://localhost:1313/posts/linux/embedded-linux-development/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux/embedded-linux-development/embedded-linux-development/</guid>
+      <guid>http://localhost:1313/posts/linux/embedded-linux-development/</guid>
       <description>This is a note for learning embedded linux development. The used development board is N32G0 of &lt;em&gt;Nationstech&lt;/em&gt;</description>
     </item>
     <item>
@@ -22,27 +43,6 @@
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</guid>
       <description>Simple usage of usb2can on Ubuntu</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/linux/linux_preference/linux_preference/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux/linux_preference/linux_preference/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/tools/blogs/blogs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/tools/blogs/blogs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/tools/docker_note/docker_note/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/tools/docker_note/docker_note/</guid>
-      <description></description>
     </item>
     <item>
       <title>advanced</title>

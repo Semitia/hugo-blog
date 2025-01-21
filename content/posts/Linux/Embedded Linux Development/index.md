@@ -1,12 +1,20 @@
 ---
+
 title: "Embedded Development on Linux"
+
 date: 2025-01-14
+
 description: "A note for learning embedded linux development."
+
 summary: "This is a note for learning embedded linux development. The used development board is N32G0 of *Nationstech*"
+
 tags: ["embedded", "linux"]
+
 ---
 
 This is a note for learning embedded linux development. The used development board is N32G0 of *Nationstech*
+
+
 
 ## Reference Links
 
@@ -313,3 +321,6 @@ file path: "build/N32G45x_GCC/N32G45xDemo.bin"
 ### Armcc
 
 #### compile
+
+
+![IMG-20250121233152772.png](/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250121233152772.png)
