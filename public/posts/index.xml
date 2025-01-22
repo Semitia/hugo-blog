@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Semitia-Blog</title>
+    <title>开发随笔 on Semitia-Blog</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Semitia-Blog</description>
+    <description>Recent content in 开发随笔 on Semitia-Blog</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
     <copyright>&amp;copy; 2024 Congo contributors</copyright>
@@ -11,37 +11,37 @@
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogs</title>
-      <link>http://localhost:1313/posts/tools/blogs/</link>
+      <link>http://localhost:1313/posts/blogs/</link>
       <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/tools/blogs/</guid>
+      <guid>http://localhost:1313/posts/blogs/</guid>
       <description>Blog configuration with common frameworks.</description>
     </item>
     <item>
       <title>Docker Note</title>
-      <link>http://localhost:1313/posts/tools/docker-note/</link>
+      <link>http://localhost:1313/posts/docker-note/</link>
       <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/tools/docker-note/</guid>
+      <guid>http://localhost:1313/posts/docker-note/</guid>
       <description>Practical usage of Docker.</description>
     </item>
     <item>
       <title>linux preference</title>
-      <link>http://localhost:1313/posts/linux/linux-preference/</link>
+      <link>http://localhost:1313/posts/linux-preference/</link>
       <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux/linux-preference/</guid>
+      <guid>http://localhost:1313/posts/linux-preference/</guid>
       <description>Useful system configuration for linux.</description>
     </item>
     <item>
       <title>Embedded Development on Linux</title>
-      <link>http://localhost:1313/posts/linux/embedded-linux-development/</link>
+      <link>http://localhost:1313/posts/embedded-linux-development/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux/embedded-linux-development/</guid>
-      <description>This is a note for learning embedded linux development. The used development board is N32G0 of &lt;em&gt;Nationstech&lt;/em&gt;</description>
+      <guid>http://localhost:1313/posts/embedded-linux-development/</guid>
+      <description>A note for learning embedded linux development. The used development board is N32G0 of &lt;em&gt;Nationstech&lt;/em&gt;</description>
     </item>
     <item>
       <title>usb2can on Ubuntu</title>
-      <link>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</link>
+      <link>http://localhost:1313/posts/usb2can-on-ubuntu/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</guid>
+      <guid>http://localhost:1313/posts/usb2can-on-ubuntu/</guid>
       <description>Simple usage of usb2can on Ubuntu</description>
     </item>
   </channel>

@@ -1,12 +1,20 @@
 ---
-title: "Welcome to Congo! :tada:"
-description: "This is a demo of the Congo theme for Hugo."
+title: "Profile"
+description: "Welcome to my blog"
 ---
 
-{{< lead >}}
-A powerful, lightweight theme for Hugo built with Tailwind CSS.
-{{< /lead >}}
+<!-- <style>
+  body {
+    margin: 0;
+    background: linear-gradient(120deg,rgb(0, 142, 208),rgb(45, 59, 150),rgb(161, 79, 177));
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style> -->
 
-This is a demo site built entirely using Congo. It also contains a complete set of [theme documentation]({{< ref "docs" >}}). Congo is flexible and is great for both static page-based content (like this demo) or a traditional blog with a feed of recent posts.
-
-{{< figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&pause=1000&color=647CF7&width=450&lines=%F0%9F%91%8B+Welcome+To+My+Blog+%F0%9F%91%8B+" alt="Typing SVG" /></a>

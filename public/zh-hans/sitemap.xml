@@ -5,11 +5,9 @@
     
   
     
-  
-    
       <url>
-            <loc>http://localhost:1313/posts/linux/embedded-linux-development/</loc>
-            <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+            <loc>http://localhost:1313/posts/blogs/</loc>
+            <lastmod>2025-01-21T00:00:00+00:00</lastmod>
           </url>
     
   
@@ -17,15 +15,26 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/</loc>
-            <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+            <loc>http://localhost:1313/posts/docker-note/</loc>
+            <lastmod>2025-01-21T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/linux-preference/</loc>
+            <lastmod>2025-01-21T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
             <loc>http://localhost:1313/</loc>
-            <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+            <lastmod>2025-01-21T00:00:00+00:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
@@ -43,26 +52,26 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/linux/usb2can-on-ubuntu/</loc>
+            <loc>http://localhost:1313/posts/</loc>
+            <lastmod>2025-01-21T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/embedded-linux-development/</loc>
             <lastmod>2025-01-14T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/linux/linux_preference/</loc>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/tools/blogs/</loc>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/tools/docker_note/</loc>
+            <loc>http://localhost:1313/posts/usb2can-on-ubuntu/</loc>
+            <lastmod>2025-01-14T00:00:00+00:00</lastmod>
           </url>
     
   
@@ -83,6 +92,12 @@
     
       <url>
             <loc>http://localhost:1313/tags/_index.zh-cn/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/notes/</loc>
           </url>
     
   
