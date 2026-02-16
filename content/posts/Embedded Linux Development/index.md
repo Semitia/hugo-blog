@@ -14,8 +14,6 @@ tags: ["embedded", "linux"]
 
 This is a note for learning embedded linux development. The used development board is N32G0 of *Nationstech*
 
-
-
 ## Reference Links
 
 - [Nationstech Developer Community](https://www.nationstech.com/developer/)
@@ -296,10 +294,9 @@ Then **reboot** Ubuntu and check the USB again:
 
 With the help of VsCode extension **EIDE**, it's convient to use gcc to compile chips of *Cortex-M4* series. However, it doesn't support *Cortex-M0* series.
 
-![](/home/semitia/.config/marktext/images/2024-07-12-14-49-42-image.png)
+![IMG-20250123185742358.webp](/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250123185742358.webp)
 
-![](/home/semitia/.config/marktext/images/2024-07-12-14-50-09-image.png)
-
+![IMG-20250123185748430.webp](/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250123185748430.webp)
 #### N32 G4x
 
 ```bash
@@ -316,11 +313,11 @@ file path: "build/N32G45x_GCC/N32G45xDemo.bin"
 [ DONE ] build successfully !, elapsed time 0:0:0
 ```
 
-##### N32 G0x
+#### N32 G0x
 
 ### Armcc
 
 #### compile
 
 
-![IMG-20250121233152772.png](/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250121233152772.png)
+![IMG-20250121233152772.webp](/img/posts/Linux/Embedded%20Linux%20Development/IMG-20250121233152772.webp)

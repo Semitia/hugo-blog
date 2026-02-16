@@ -1,0 +1,15 @@
+services:
+  myHugo:
+    image: hugomods/hugo:exts-0.145.0
+    container_name: Hugo-container
+    network_mode: host
+    environment:       
+      - HTTP_PROXY=http://127.0.0.1:7890  
+      - HTTPS_PROXY=http://127.0.0.1:7890
+    volumes:
+      - .:/src  # 将yml当前目录挂载到容器的/src目录
+    privileged: true  
+    working_dir: /src
+    stdin_open: true              
+    tty: true              
+    command: server -D -p 1313 --bind 0.0.0.0
