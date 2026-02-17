@@ -16,23 +16,25 @@
   weight = 10
 
 [[main]]
-  name = "projects"
-  pageRef = "projects"
-  weight = 10
-
-[[main]]
   name = "notes"
   pageRef = "notes"
   weight = 10
 
+[[main]]
+  name = "essays"
+  pageRef = "essays"
+  weight = 10
+
 # [[main]]
-#   name = "GitHub"
-#   url = "https://github.com/Semitia"
-#   weight = 40
-#   [main.params]
-#     icon = "github"
-#     showName = false
-#     target = "_blank"
+#   name = "projects"
+#   pageRef = "projects"
+#   weight = 10
+
+
+# [[main]]
+#   name = "friends"
+#   pageRef = "friends"
+#   weight = 10
 
 [[main]]
   identifier = "搜索"

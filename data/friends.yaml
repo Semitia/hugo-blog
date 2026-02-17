@@ -1,0 +1,9 @@
+- name: "liano"
+  url: "https://example.com"
+  avatar: "img/Citlali-avator.jpg"
+  description: "111"
+
+# - name: "另一个机器友"
+#   url: "https://robotics-fan.com"
+#   avatar: "https://robotics-fan.com/logo.png"
+#   description: "SLAM 算法工程师"

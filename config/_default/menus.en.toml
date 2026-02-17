@@ -16,14 +16,15 @@
   weight = 10
 
 [[main]]
-  name = "projects"
-  pageRef = "projects"
-  weight = 10
-
-[[main]]
   name = "notes"
   pageRef = "notes"
   weight = 10
+
+[[main]]
+  name = "essays"
+  pageRef = "essays"
+  weight = 10
+
   
 [[main]]
   identifier = "search"

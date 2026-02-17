@@ -17,11 +17,15 @@ copyright = "&copy; 2024 Congo contributors"
   headline = "A Robot newbie."
   bio = "A Robot newbie."
   links = [
-    { x-twitter = "https://twitter.com/" },
+    # { x-twitter = "https://twitter.com/" },
     # { facebook = "https://facebook.com/" },
     # { linkedin = "https://linkedin.com/" },
-    { youtube = "https://youtube.com/" },
+    { tools = "https://tools.semitia.top/"},
+    { games = "https://games.semitia.top/"},
+    # { youtube = "https://youtube.com/" },
     { github = "https://github.com/" },
     { google-scholar = "https://scholar.google.com/" },
     { email = "mailto:Alexavier-L@outlook.com"},
+    
+    # { bilibili = "https://bilibili.com/" },
   ]

@@ -16,7 +16,7 @@ hugo_content_root = os.path.join(hugo_root, "content")
 hugo_static_root = os.path.join(hugo_root, "static")
 
 # 同步的文件夹
-SYNC_FOLDERS = ["posts", "notes", "projects"]
+SYNC_FOLDERS = ["Posts", "Notes", "Projects", "Essays"]
 
 # 时间限制
 time_interval = timedelta(days=30)
