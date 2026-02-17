@@ -1,0 +1,25 @@
+/* 定义动画关键帧（两种模式通用） */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 默认（浅色模式 Light Mode）背景设置 */
+body {
+  /* 这里选了一组比较清新的浅色渐变，你可以根据喜好修改 hex 值 */
+  background: linear-gradient(-45deg, #ffe6df, #dfe7ff, #f7ffdf);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  
+}
+
+/* 深色模式（Dark Mode）背景设置 */
+/* 当 html 标签有 dark 类时，覆盖 body 的 background */
+.dark body {
+  /* 这里使用你之前提供的深色渐变 */
+  background: linear-gradient(-45deg, #522a39, #2b3b54, #3e592d);
+  background-size: 400% 400%;
+  /* 动画复用 */
+  animation: gradientAnimation 15s ease infinite;
+}

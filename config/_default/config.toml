@@ -14,3 +14,9 @@ summaryLength = 0
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# [params]
+#   # ... 其他配置 ...
+  
+#   # 在这里引入你的 custom.css
+#   customCSS = ["css/custom.css"]
