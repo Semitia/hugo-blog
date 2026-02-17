@@ -11,7 +11,7 @@ body {
   background: linear-gradient(-45deg, #ffe6df, #dfe7ff, #f7ffdf);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
-  
+  background-attachment: fixed;
 }
 
 /* 深色模式（Dark Mode）背景设置 */
@@ -22,4 +22,5 @@ body {
   background-size: 400% 400%;
   /* 动画复用 */
   animation: gradientAnimation 15s ease infinite;
+  background-attachment: fixed;
 }

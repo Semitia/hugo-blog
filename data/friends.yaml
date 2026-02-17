@@ -1,6 +1,7 @@
 - name: "liano"
   url: "https://liano.top"
-  avatar: "img/Citlali-avator.jpg"
+  # avatar: "img/Citlali-avator.jpg"
+  avatar: "img/wolf.jpg"
   description: "111"
 
 # - name: "另一个机器友"
