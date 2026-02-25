@@ -1,0 +1,68 @@
+<article
+  class="{{ if not .Site.Params.homepage.showRecent }}
+    h-full
+  {{ end }} flex flex-col items-center justify-center text-center"
+>
+  {{ partial "profile.html" }}
+  <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
+</article>
+
+{{/* Categories Section */}}
+{{ if .Site.Taxonomies.categories }}
+<section class="mt-8 flex flex-col items-start justify-center">
+  <h2 class="mb-6 text-2xl font-extrabold">{{ i18n "taxonomies.categories" | default "Categories" | emojify }}</h2>
+  <div class="flex flex-col w-full">
+    {{ range $name, $items := .Site.Taxonomies.categories }}
+    <a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize }}/" class="group flex items-center justify-between py-2 text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400">
+      <div class="flex items-center">
+        <span class="mr-2 text-lg">📁</span>
+        <span class="text-lg font-medium">{{ $name }}</span>
+      </div>
+      <span class="ml-2 text-sm text-neutral-500 group-hover:text-primary-500 dark:text-neutral-400">({{ len $items }})</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* Tags Section */}}
+{{ if .Site.Taxonomies.tags }}
+<section class="mt-8 flex flex-col items-start justify-center">
+  <h2 class="mb-6 text-2xl font-extrabold">{{ i18n "taxonomies.tags" | default "Tags" | emojify }}</h2>
+  <div class="flex flex-wrap gap-y-3">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ .Name | urlize }}/" class="me-8 group flex items-center text-lg text-neutral-800 dark:text-neutral-200">
+      <span class="decoration-primary-500 group-hover:underline group-hover:underline-offset-4">{{ .Name }}</span>
+      <span class="ml-2 text-sm text-neutral-400 dark:text-neutral-500">· {{ .Count }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<section>
+  {{ partial "recent-articles.html" . }}
+</section>
+
+{{/* Friend Links Section */}}
+{{ if .Site.Data.friends }}
+<section class="mt-8 flex flex-col items-start justify-center w-full">
+  <h2 class="mb-6 text-2xl font-extrabold">友情链接</h2>
+  
+  <div class="flex flex-col gap-4 w-full">
+    {{ range .Site.Data.friends }}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="group flex items-center p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all duration-200">
+      {{ if .avatar }}
+      <img src="{{ .avatar }}" alt="{{ .name }}" class="w-12 h-12 rounded-full object-cover mr-4 shadow-sm group-hover:shadow-md transition-shadow">
+      {{ end }}
+      <div class="flex flex-col text-left">
+        <span class="text-lg font-bold text-primary-600 group-hover:text-primary-700 dark:text-primary-400 dark:group-hover:text-primary-300">{{ .name }}</span>
+        {{ if .description }}
+        <span class="text-sm text-neutral-500 dark:text-neutral-400">{{ .description }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

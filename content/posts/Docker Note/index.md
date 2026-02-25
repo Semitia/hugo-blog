@@ -4,6 +4,7 @@ date: 2025-01-21
 description: Practical usage of Docker.
 summary: Practical usage of Docker.
 tags: ["Docker"]
+categories: ["Tools"]
 ---
 
 ![IMG-20250121235045541.webp](/img/posts/Tools/Docker%20Note/IMG-20250121235045541.webp)

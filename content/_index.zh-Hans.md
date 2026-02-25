@@ -51,7 +51,8 @@ featureAsset: "teaser.jpg"
 {{< figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
 
 
+<!-- 
 ### 友情链接
-{{< friend-links >}}
+{{< friend-links >}} -->
 
 ---
