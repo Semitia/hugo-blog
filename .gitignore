@@ -23,3 +23,6 @@ desktop.ini
 # 如果你直接用 Obsidian 打开这个文件夹写博客，
 # 你肯定不希望把你的插件配置和工作区状态上传上去
 .obsidian/
+
+# Agent 生成
+plans/

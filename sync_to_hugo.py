@@ -132,7 +132,7 @@ def sync_folder(folder_name):
                 hugo_zh = os.path.join(hugo_note_dir, "index.zh-Hans.md")
                 hugo_en = os.path.join(hugo_note_dir, "index.md")
                 shutil.copy2(obsidian_note_path, hugo_zh)
-                shutil.copy2(obsidian_note_path, hugo_en)
+                # shutil.copy2(obsidian_note_path, hugo_en)
 
                 # === 处理图片 (新增分组逻辑) ===
                 # [删除] 原来的逻辑：寻找 Attachment/posts/分类/笔记名

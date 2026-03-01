@@ -25,17 +25,6 @@
   pageRef = "essays"
   weight = 10
 
-# [[main]]
-#   name = "projects"
-#   pageRef = "projects"
-#   weight = 10
-
-
-# [[main]]
-#   name = "friends"
-#   pageRef = "friends"
-#   weight = 10
-
 [[main]]
   identifier = "搜索"
   weight = 99
