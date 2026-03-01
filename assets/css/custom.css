@@ -14,6 +14,24 @@ body {
   background-attachment: fixed;
 }
 
+/* Homepage Tags Spacing and Colors */
+.homepage-tag {
+  margin-right: 2rem !important; /* me-8 override */
+}
+
+.homepage-tag-count {
+  margin-left: 0.5rem !important; /* ml-2 override */
+}
+
+/* Dark Mode Tag Colors */
+.dark .homepage-tag {
+  color: #e5e5e5 !important; /* text-neutral-200 */
+}
+
+.dark .homepage-tag-count {
+  color: #a3a3a3 !important; /* text-neutral-400 */
+}
+
 /* 深色模式（Dark Mode）背景设置 */
 /* 当 html 标签有 dark 类时，覆盖 body 的 background */
 .dark body {
