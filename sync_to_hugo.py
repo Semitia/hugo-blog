@@ -9,7 +9,7 @@ import glob
 # Obsidian 和 Hugo 的主目录
 # obsidian_root = os.path.expanduser("~/文档/ObsidianRepo")
 obsidian_root = os.path.expanduser("/mnt/d/WORK/ObsidianRepo")
-hugo_root = os.path.expanduser("~/Blogs/hugo-blog")
+hugo_root = os.path.expanduser("~/Blog/hugo-blog")
 
 obsidian_attachments_root = os.path.join(obsidian_root, "Attachment")
 hugo_content_root = os.path.join(hugo_root, "content")
